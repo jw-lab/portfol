@@ -109,6 +109,8 @@ window.addEventListener("load",() => {
     raf = window.requestAnimationFrame(draw);
     // home page event end
     
+
+    //mouse wheel event start
     document.addEventListener("wheel", e => {
         e.preventDefault();
     }, {passive:false})
@@ -127,7 +129,7 @@ window.addEventListener("load",() => {
         //animate 실행 중이면 return
         if(vHtml.is(":animated")) return;
         if(e.deltaY > 0) {
-            if(page == 3) {
+            if(page == 3 || page == 4) {
                 const slider = document.querySelector(`#section${page} .slider`);
                 const sliderLis = slider.querySelectorAll("li");
                 const nowIdx = sliderIdx[`page${page}`];
@@ -136,10 +138,12 @@ window.addEventListener("load",() => {
                     return;       
                 }
             }
-            if(page == 4) return;
-            page++;
+            if(page < 4) {
+                page++;
+            }
+            
         } else if(e.deltaY < 0) {
-            if(page == 3) {
+            if(page == 3 || page == 4) {
                 const nowIdx = sliderIdx[`page${page}`];
                 if (nowIdx > 0) {
                     slide(page,e);
@@ -164,7 +168,6 @@ window.addEventListener("load",() => {
         let currentIdx = sliderIdx[`page${p}`];
         let xpos = sliderXpos[`page${p}`];
         if (e.deltaY > 0) {
-            if (page == 4) return;
             if (currentIdx < sliderLis.length - 1) {
                 xpos -= liWidth;
                 slider.style.transform = `translateX(${xpos}px)`;
@@ -182,21 +185,5 @@ window.addEventListener("load",() => {
 
         return;
     }
-
-    /*
-    document.addEventListener("wheel", (e)=>{
-        //animate 실행 중이면 return
-        if(vHtml.is(":animated")) return;
-        if(e.deltaY > 0) {
-            if(page == 4) return;
-            page++;
-        } else if(e.deltaY < 0) {
-            if(page == 1) return;
-            page--;
-        }
-        const posTop =(page-1) * window.innerHeight;
-        vHtml.animate({scrollTop : posTop});
-    })
-    */
 
 });
