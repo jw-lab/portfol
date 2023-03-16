@@ -8,13 +8,15 @@
     --red-color: #ff0000;
     --grey-dark-color: #909090;
     --grey-light-color: #e0e0e0;
-  
+    --green-color: #6DB33F;
     /* Size */
     --max-width-outer: 1200px;
     --max-width-inner: 960px;
     --side-padding: 12px;
   
     /* Font Size */
+    --font-xxlarge: 72px;
+    --font-xlarge: 36px;
     --font-large: 18px;
     --font-medium: 14px;
     --font-small: 12px;
@@ -39,7 +41,7 @@ html, body {
     height: 100%;
 }
 body {
-font-family: "Roboto";
+    font-family: "Roboto";
 }
 
 ul {
@@ -113,16 +115,35 @@ background: none;
 /*                     page2                    */
 /* #############################################*/
 
+/* visual */
+.visual-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 45vh;
+    aspect-ratio: 16/9;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--white-color);
+}
+.visual-wrapper h1 {
+    position: absolute;
+    top: 100px;
+    color: var(--white-color);
+    font-size: var(--font-xxlarge);
+}
 /* Who Am I */
 .who-title {
     position: absolute;
-    top: 20px;
+    top: -20px;
+    color: var(--white-color);
+    mix-blend-mode: difference;
 }
 .who-wrapper {
     max-width: var(--max-width-inner);
     width: 90%;
     height: 20vh;
-    margin: 0 auto;
+    margin: 20px auto;
     background-color: var(--black-color);
     border-radius: 15px;
     color: var(--white-color);
@@ -133,7 +154,7 @@ background: none;
     align-items: center;
     padding-top: 30px;
     position: relative;
-    top: 10vh;
+    
 }
 .who-spec {
     width: 60%;
@@ -146,14 +167,16 @@ background: none;
 .career-container {
     max-width: var(--max-width-inner);
     width: 90%;
-    margin: 10vh auto;
+    margin: 0 auto;
 }
 
 .circle-wrapper {
     display: flex;
     justify-content: space-around;
     border-top: 3px solid var(--black-color);
-    height: 5vh;
+    height: 2vh;
+    position: relative;
+    top: 20px;
 }
 
 .circle-wrapper .circle {
@@ -166,39 +189,41 @@ background: none;
     top: -20px;
 }
 .card-wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .card {
     padding: 15px;
     margin: 15px;
-    height: 50vh;
+    height: 25vh;
     background-color: var(--black-color);
     color: var(--white-color);
     font-weight: var(--font-w-bold);
     border-radius: 5px;
 }
-
+.card h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+.card li {
+    padding: 3px 0px;
+}
 /* #############################################*/
 /*                     page3                    */
 /* #############################################*/
-#section1 {
-
-}
-
 #section2 {
 
     display: block;
 }
 
-#section3 {
-
+#section2,#section3,#section4 {
+    background-color: var(--white-color);
 }
-
-#section4 {
-    
+.frame-title {
+    position: absolute;
+    top: -20px;
+    color: var(--white-color);
+    mix-blend-mode: difference;
 }
 
 .frame-wrapper {
@@ -211,6 +236,8 @@ background: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    
 }
 .frame-wrapper .frame {
     max-height: 90%;
