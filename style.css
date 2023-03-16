@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 :root {
     /* Color */
-  
     --white-color: #fff;
     --black-color: #140a00;
     --blue-color: #045fd4;
@@ -42,6 +41,7 @@ html, body {
 }
 body {
     font-family: "Roboto";
+
 }
 
 ul {
