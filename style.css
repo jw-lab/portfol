@@ -262,4 +262,5 @@ background: none;
 
  .frame-wrapper .frame img {
     width: 72vw;
+    object-fit: scale-down;
 }  
