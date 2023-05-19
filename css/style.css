@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 :root {
     /* Color */
     --white-color: #fff;
@@ -8,6 +8,8 @@
     --grey-dark-color: #909090;
     --grey-light-color: #e0e0e0;
     --green-color: #6DB33F;
+    --primary : #EC912D;
+    --secondary : #232F3E;
     /* Size */
     --max-width-outer: 1200px;
     --max-width-inner: 960px;
@@ -40,7 +42,7 @@ html, body {
     height: 100%;
 }
 body {
-    font-family: "Roboto";
+    font-family: "Montserrat";
 
 }
 
@@ -63,6 +65,13 @@ background: none;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.primary {
+    background-color: var(--primary);
+}
+.secondary {
+    background-color: var(--secondary);
 }
 /* #############################################*/
 /*                     page1                    */
