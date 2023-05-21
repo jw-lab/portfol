@@ -8,23 +8,10 @@
     --grey-dark-color: #909090;
     --grey-light-color: #e0e0e0;
     --green-color: #6DB33F;
-    --primary : #EC912D;
+    --primary: #669DDF;
     --secondary : #232F3E;
-    /* Size */
-    --max-width-outer: 1200px;
-    --max-width-inner: 960px;
-    --side-padding: 12px;
-  
-    /* Font Size */
-    --font-xxlarge: 72px;
-    --font-xlarge: 36px;
-    --font-large: 18px;
-    --font-medium: 14px;
-    --font-small: 12px;
-    --font-micro: 10px;
-    --font-w-bold: 700;
-    --font-w-normal: 500;
-    --font-w-light: 300;
+    --tertiary : #EC912D;
+
   }
   
 * {
@@ -43,7 +30,8 @@ html, body {
 }
 body {
     font-family: "Montserrat";
-
+    overflow: hidden;
+    height: 100%;
 }
 
 ul {
@@ -58,6 +46,10 @@ outline: none;
 background: none;
 }
 
+section {
+    padding-top: 90px;
+}
+
 .section {
     width: 100%;
     height: 100%;
@@ -67,44 +59,64 @@ background: none;
     align-items: center;
 }
 
-.primary {
+/* .scroller {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.scroller .section {
+    scroll-snap-align: start;
+} */
+
+.b-primary {
     background-color: var(--primary);
 }
-.secondary {
+.b-secondary {
     background-color: var(--secondary);
+}
+.b-tertiary {
+    background-color: var(--tertiary);
+}
+.txt-primary {
+    color: var(--primary);
+}
+.txt-secondary {
+    color: var(--secondary);
+}
+.txt-tertiary {
+    columns: var(--tertiary);
 }
 /* #############################################*/
 /*                     page1                    */
 /* #############################################*/
-
-/* home page */
-.main {
+.main > img {
     position: relative;
     background-color: var(--black-color);
-    border-radius: 50px;
+    border-radius: 2rem;
+    width: 100%;
 }
 
 .mouse {
-    width: 40px;
-    height: 80px;
-    border: 4px solid var(--grey-dark-color);
-    border-radius: 50px;
+    width: 2rem;
+    height: 4rem;
+    border: 0.25rem solid var(--grey-dark-color);
+    border-radius: 2rem;
     position: absolute;
     left: 50%;
-    top: 80%;
+    top: 85%;
     transform: translate(-50%,-50%);
-    display: none;
 
 }
 
 .mouse-scroll {
-    width: 10px;
-    height: 10px;
-    border: 5px solid var(--grey-dark-color);
-    border-radius: 25px;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 0.4rem solid var(--grey-dark-color);
+    border-radius: 2rem;
     margin-inline: auto;
     position: relative;
-    top: 10px;
+    top: 0.75rem;
     animation: mouse 2s infinite;
 
 }
@@ -123,100 +135,55 @@ background: none;
 /* #############################################*/
 /*                     page2                    */
 /* #############################################*/
-
-/* visual */
-.visual-wrapper {
-    display: flex;
-    justify-content: center;
-    height: 45vh;
-    aspect-ratio: 16/9;
-    width: 100%;
+.portfolio .portfolio-item {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    max-width: 25rem;
+    border-radius: 0.5rem;
     overflow: hidden;
-    position: relative;
-    background-color: var(--white-color);
-}
-.visual-wrapper h1 {
+  }
+  .portfolio .portfolio-item .portfolio-item-caption {
     position: absolute;
-    top: 100px;
-    color: var(--white-color);
-    font-size: var(--font-xxlarge);
-}
-/* Who Am I */
-.who-title {
-    position: absolute;
-    top: -20px;
-    color: var(--white-color);
-    mix-blend-mode: difference;
-}
-.who-wrapper {
-    max-width: var(--max-width-inner);
-    width: 90%;
-    height: 20vh;
-    margin: 20px auto;
-    background-color: var(--black-color);
-    border-radius: 15px;
-    color: var(--white-color);
-    font-size: var(--font-large);
-    font-weight: var(--font-w-bold);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-    position: relative;
-    
-}
-.who-spec {
-    width: 60%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-}
-
-/*project summary*/
-.career-container {
-    max-width: var(--max-width-inner);
-    width: 90%;
-    margin: 0 auto;
-}
-
-.circle-wrapper {
-    display: flex;
-    justify-content: space-around;
-    border-top: 3px solid var(--black-color);
-    height: 2vh;
-    position: relative;
-    top: 20px;
-}
-
-.circle-wrapper .circle {
-    width: 30px;
-    height: 30px;
-    border: 5px solid var(--black-color);
-    background-color: var(--white-color);
-    border-radius: 50%;
-    position: relative;
-    top: -20px;
-}
-.card-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-.card {
-    padding: 15px;
-    margin: 15px;
-    height: 25vh;
-    background-color: var(--black-color);
-    color: var(--white-color);
-    font-weight: var(--font-w-bold);
-    border-radius: 5px;
-}
-.card h3 {
-    text-align: center;
-    margin-bottom: 5px;
-}
-.card li {
-    padding: 3px 0px;
-}
+    top: 0;
+    left: 0;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    background-color: var(--primary);
+  }
+  .portfolio .portfolio-item .portfolio-item-caption:hover {
+    opacity: 0.8;
+  }
+  .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+    font-size: 1.5rem;
+  }
+  
+  .portfolio-modal .btn-close {
+    color: #1abc9c;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .portfolio-modal .portfolio-modal-title {
+    font-size: 2.25rem;
+    line-height: 2rem;
+  }
+  @media (min-width: 992px) {
+    .portfolio-modal .portfolio-modal-title {
+      font-size: 3rem;
+      line-height: 2.5rem;
+    }
+  }
+  
+  .footer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #2c3e50;
+    color: #fff;
+  }
+  
+  .copyright {
+    background-color: #1a252f;
+  }
 /* #############################################*/
 /*                     page3                    */
 /* #############################################*/

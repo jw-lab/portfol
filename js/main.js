@@ -1,162 +1,88 @@
 window.addEventListener("load",() => {
-    // home page event
-    const canvas = document.querySelector("#main-canvas");
-    const mouse = document.querySelector(".mouse");
-    const inner_width = window.innerWidth;
-    const inner_height = window.innerHeight;
-
-    canvas.width = inner_width * 0.9;
-    canvas.height = inner_height * 0.9;
-    const ctx = canvas.getContext("2d");
-    let raf;
-    let stat = 0;
-    const ball = {
-    x: (canvas.width / 2) * 0.75 ,
-    y: 100,
-    vx: 3,
-    vy: 5,
-    radius: 25,
-    color: "white",
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-        ctx.closePath();
-        ctx.fillStyle = this.color;
-        ctx.fill();
-    },
-    };
+    // const vHtml = $("html");
+    // //onload시 position top 0 으로 
+    // vHtml.animate({scrollTop : 0},10);
     
-    const ball2 = {
-    x: (canvas.width / 2) * 0.9,
-    y: 100,
-    vx: 1.3,
-    vy: 5,
-    radius: 25,
-    color: "white",
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-        ctx.closePath();
-        ctx.fillStyle = this.color;
-        ctx.fill();
-    },
-    };
+    // //mouse wheel event start
+    // document.addEventListener("wheel", e => {
+    //     e.preventDefault();
+    //     //animate 실행 중이면 return
+    //     if(vHtml.is(":animated")) return;
 
-    function draw() {
-        ball.draw();
-        if(ball.y > 350) {
-            stat = 1;
-            ball.x -=ball.vx;
-            ball.y =350;
-        }
-        else if(ball.y > 300) {
-            if(stat == 0) {
-                ball.x -=ball.vx;
-                ball.y += ball.vy;    
-                ball.vy *= 0.9;
-            }else if (stat == 1) {
-                ball.x -=ball.vx;
-                ball.y -= ball.vy;
-                ball.vy *= 1.1;
-                
-            }
-            
-        }
-        else if(ball.y <= 300) {
-            ball.y += ball.vy;    
-        } 
+    //     // get Y-axis value of each div:
+    //     var div1y = $('#section1').offset().top,
+    //         div2y = $('#section2').offset().top,
+    //         div3y = $('#section3').offset().top,
+    //         div4y = $('#section4').offset().top,
+    //         div5y = $('#section5').offset().top,
+    //         // get window's current scroll position:
+    //         lastScrollTop = $(this).scrollTop(),
+    //         // for getting user's scroll direction:
+    //         scrollDirection,
+    //         // for determining the previous and next divs to scroll to, based on lastScrollTop:
+    //         targetUp,
+    //         targetDown,
+    //         // for determining which of targetUp or targetDown to scroll to, based on scrollDirection:
+    //         targetElement;
 
-        if(ball.y < 300 && stat == 1) {
-            window.cancelAnimationFrame(raf);
-            stat = 0;
-            draw_w();
-        } else{
-            raf = window.requestAnimationFrame(draw);
-        }
-    }
-    let cnt = 0;
-    function draw_w() {
-        ball2.draw();
-        if(ball2.y > 350) {
-            stat = 1;
-            ball2.x +=ball2.vx;
-            ball2.y =350;
-        }
-        else if(ball2.y <= 100 && stat == 1) {
-            stat = 0;
-            ball2.x +=ball2.vx;
-            ball2.y = 100;
-            cnt++;
-        }
-        else {
-            if (stat == 0) {
-                ball2.x += ball2.vx;
-                ball2.y += ball2.vy;    
-            } else {
-                ball2.x += ball2.vx;
-                ball2.y -= ball2.vy;
-            }
-            
-        } 
+    //         // get scroll direction:
+    //         if ( e.deltaY > 0 ) {
+    //         scrollDirection = 'up';
+    //         } else if ( e.deltaY <= 0 ) {
+    //         scrollDirection = 'down';
+    //         } 
 
-        if(cnt == 2) {
-            window.cancelAnimationFrame(raf);
-            mouse.style.display = "block";
-        } else{
-            raf = window.requestAnimationFrame(draw_w);
-        }
-    }
-    raf = window.requestAnimationFrame(draw);
-    // home page event end
-    
+    //     // condition: determine the previous and next divs to scroll to, based on lastScrollTop:
+    //     if (lastScrollTop === div1y) {
+    //     targetUp = $('#section1');
+    //     targetDown = $('#section2');
+    //     } else if (lastScrollTop === div2y) {
+    //     targetUp = $('#section1');
+    //     targetDown = $('#section3');
+    //     } else if (lastScrollTop === div3y) {
+    //     targetUp = $('#section2');
+    //     targetDown = $('#section4');
+    //     } else if (lastScrollTop === div4y) {
+    //     targetUp = $('#section3');
+    //     targetDown = $('#section5');
+    //     } else if (lastScrollTop === div5y) {
+    //     targetUp = $('#section4');
+    //     targetDown = $('#section6');
+    //     } else if (lastScrollTop === div6y) {
+    //     targetUp = $('#section5');
+    //     targetDown = $('#section6');
+    //     } else if (lastScrollTop < div2y) {
+    //     targetUp = $('#section1');
+    //     targetDown = $('#section2');
+    //     } else if (lastScrollTop < div3y) {
+    //     targetUp = $('#section2');
+    //     targetDown = $('#section3');
+    //     } else if (lastScrollTop < div4y) {
+    //     targetUp = $('#section3');
+    //     targetDown = $('#section4');
+    //     } else if (lastScrollTop < div5y) {
+    //     targetUp = $('#section4');
+    //     targetDown = $('#section5');
+    //     } else if (lastScrollTop < div6y) {
+    //     targetUp = $('#section5');
+    //     targetDown = $('#section6');
+    //     } else if (lastScrollTop > div6y) {
+    //     targetUp = $('#section6');
+    //     targetDown = $('#section6');
+    //     } // end else if
 
-    //mouse wheel event start
-    document.addEventListener("wheel", e => {
-        e.preventDefault();
-    }, {passive:false})
+    //     // condition: determine which of targetUp or targetDown to scroll to, based on scrollDirection:
+    //     if (scrollDirection === 'down') {
+    //     targetElement = targetDown;
+    //     } else if (scrollDirection === 'up') {
+    //     targetElement = targetUp;
+    //     } // end else if
 
-    const vHtml = $("html");
-    let page = 1;
-    //onload시 position top 0 으로 
-    vHtml.animate({scrollTop : 0},10);
-    
-    let sliderIdx = {"page3":0, "page4":0};//slider 현재 idx
-    let sliderXpos = {"page3":0, "page4":0};//slider x aixs
+    //     const posTop =(page-1) * window.innerHeight;
+    //     vHtml.animate({scrollTop : posTop});
 
-    const sections = document.querySelectorAll(".section");
-    sections.forEach((e) => {
-       e.addEventListener("wheel", (e)=>{
-        //animate 실행 중이면 return
-        if(vHtml.is(":animated")) return;
-        if(e.deltaY > 0) {
-            if(page == 3 || page == 4) {
-                const slider = document.querySelector(`#section${page} .slider`);
-                const sliderLis = slider.querySelectorAll("li");
-                const nowIdx = sliderIdx[`page${page}`];
-                if (nowIdx < sliderLis.length - 1) {
-                    slide(page,e);
-                    return;       
-                }
-            }
-            if(page < 4) {
-                page++;
-            }
-            
-        } else if(e.deltaY < 0) {
-            if(page == 3 || page == 4) {
-                const nowIdx = sliderIdx[`page${page}`];
-                if (nowIdx > 0) {
-                    slide(page,e);
-                    return;
-                }
-            }
-            if(page == 1) return;
-            page--;
-        }
-        const posTop =(page-1) * window.innerHeight;
-        vHtml.animate({scrollTop : posTop});
-    })
-    })
+    // }, {passive:false})
+
 
     const slide = (p,e)=>{
         const slider = document.querySelector(`#section${p} .slider`);

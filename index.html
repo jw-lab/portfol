@@ -21,12 +21,12 @@
     <link rel="stylesheet" href="css/style.css">
     <title>jw-portfolio</title>
 </head>
-<body id="page-top">
+<body id="page-top" class="scroller">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg text-uppercase fixed-top secondary" id="mainNav">
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top b-secondary" id="mainNav">
         <div class="container">
             <a class="navbar-brand text-white" href="#page-top">jw-portfolio</a>
-            <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded b-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
             </button>
@@ -42,8 +42,8 @@
 
     <!-- header-->
     <header class="section" id="section1">
-        <div class="main">
-            <canvas id="main-canvas"></canvas>
+        <div class="main container">
+            <img src="images/visual.png" alt="...">
             <div class="mouse">
                 <div class="mouse-scroll"></div>
             </div>
@@ -54,40 +54,35 @@
     <section class="section portfolio" id="section2">
         <div class="container">
             <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
+            <h2 class="page-section-heading text-center text-uppercase text-primary mb-0">Portfolio</h2>
+            <hr>
             <!-- Portfolio Grid Items-->
             <div class="row justify-content-center">
                 <!-- Portfolio Item 1-->
-                <div class="col-md-6 col-lg-4 mb-5">
+                <div class="col-md-6 col-lg-6 mb-3">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
+                        <img class="img-fluid" src="images/insta/insta001.png" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 2-->
-                <div class="col-md-6 col-lg-4 mb-5">
+                <div class="col-md-6 col-lg-6 mb-3">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="..." />
+                        <img class="img-fluid" src="images/watcat/watcat001.png" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 3-->
-                <div class="col-md-6 col-lg-4 mb-5">
+                <div class="col-md-6 col-lg-6 mb-3">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
+                        <img class="img-fluid" src="images/argos/argos001.png" alt="..." />
                     </div>
                 </div>
             </div>
@@ -178,7 +173,7 @@
 
     
     <!-- About Section-->
-    <section class="page-section bg-primary text-white mb-0" id="about">
+    <section class="section bg-primary text-white mb-0" id="section3">
         <div class="container">
             <!-- About Section Heading-->
             <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
@@ -203,7 +198,7 @@
         </div>
     </section>
     <!-- Contact Section-->
-    <section class="page-section" id="contact">
+    <section class="section" id="section4">
         <div class="container">
             <!-- Contact Section Heading-->
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
@@ -274,7 +269,7 @@
         </div>
     </section>
     <!-- Footer-->
-    <footer class="footer text-center">
+    <footer class="footer text-center" id="section5">
         <div class="container">
             <div class="row">
                 <!-- Footer Location-->
