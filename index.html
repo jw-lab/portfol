@@ -131,47 +131,9 @@
 
     <!-- projects -->
     <!-- <div class="section" id="section3">
-        <div class="frame-wrapper">
-            <h1 class="frame-title">WatCat</h1>
-            <div class="frame">
-                <ul class="slider">
-                    <li><img src="images/watcat/watcat001.png" alt=""></li>
-                    <li><img src="images/watcat/watcat002.png" alt=""></li>
-                    <li><img src="images/watcat/watcat003.png" alt=""></li>
-                    <li><img src="images/watcat/watcat004.png" alt=""></li>
-                    <li><img src="images/watcat/watcat005.png" alt=""></li>
-                    <li><img src="images/watcat/watcat006.png" alt=""></li>
-                    <li><img src="images/watcat/watcat007.png" alt=""></li>
-                    <li><img src="images/watcat/watcat008.png" alt=""></li>
-                    <li><img src="images/watcat/watcat009.png" alt=""></li>
-                    <li><img src="images/watcat/watcat010.png" alt=""></li>
-                    <li><img src="images/watcat/watcat011.png" alt=""></li>
-                    <li><img src="images/watcat/watcat012.png" alt=""></li>
-                    <li><img src="images/watcat/watcat013.png" alt=""></li>
-                </ul>
-            </div>
-        </div>
+        
     </div>
-    <div class="section" id="section4">
-        <div class="frame-wrapper">
-            <h1 class="frame-title">InstaClone</h1>
-            <div class="frame">
-                <ul class="slider">
-                    <li><img src="images/insta/insta001.png" alt=""></li>
-                    <li><img src="images/insta/insta002.png" alt=""></li>
-                    <li><img src="images/insta/insta003.png" alt=""></li>
-                    <li><img src="images/insta/insta004.png" alt=""></li>
-                    <li><img src="images/insta/insta005.png" alt=""></li>
-                    <li><img src="images/insta/insta006.png" alt=""></li>
-                    <li><img src="images/insta/insta007.png" alt=""></li>
-                    <li><img src="images/insta/insta008.png" alt=""></li>
-                    <li><img src="images/insta/insta009.png" alt=""></li>
-                    <li><img src="images/insta/insta010.png" alt=""></li>
-                    <li><img src="images/insta/insta011.png" alt=""></li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
+     -->
 
     
     <!-- About Section-->
@@ -222,58 +184,33 @@
             <!-- Contact Section Form-->
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7">
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <form id="contactForm">
                         <!-- Name input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                            <label for="name">Full name</label>
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" value="Junwoo Jeong" readonly/>
+                            <label for="name">이름</label>
                             <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                         </div>
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                            <label for="email">Email address</label>
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" value="jdb0731@naver.com" readonly/>
+                            <label for="email">이메일</label>
                             <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                         </div>
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                            <label for="phone">Phone number</label>
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" value="010-4561-0655"/>
+                            <label for="phone">휴대폰</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                         </div>
                         <!-- Message input-->
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required">
+                            </textarea>
                             <label for="message">Message</label>
                             <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                         </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                        <!-- Submit Button-->
-                        <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
                     </form>
                 </div>
             </div>
@@ -345,17 +282,16 @@
                                             <li><img src="images/insta/insta011.png" alt=""></li>
                                         </ul>
                                     </div>
-                                    <div>
-                                        <div class="slide_prev_button slide_button">◀</div>
-                                        <div class="slide_next_button slide_button">▶</div>
+                                    <div id="portfolio-button1">
+                                        <div class="slide-prev-button slide-button">◀</div>
+                                        <div class="slide-next-button slide-button">▶</div>
                                     </div>
                                 </div>
 
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">PC 인스타그램 웹사이트를 클론코딩 하였습니다. 로그인, post, 구독, 좋아요, 댓글, 게시물 조회 등의 기능을 구현하였습니다.</p>
-                                <button class="btn btn-primary">
-                                    <a href="http://">인스타클론 깃허브</a>
-                                </button>
+                                <p class="my-3">인스타그램 웹사이트를 클론코딩 하였습니다.
+                                    로그인, post, 구독, 좋아요, 댓글, 게시물 조회 등의 기능을 구현하였습니다.</p>
+                                <a class="btn b-tertiary" href="http://">Instaclone github</a>
                             </div>
                         </div>
                     </div>
@@ -371,23 +307,37 @@
                 <div class="modal-body text-center pb-5">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-8">
+                            <div class="col-lg-10">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-3">Tasty Cake</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-3">WatCat</h2>
+                                <!-- Portfolio Modal - Slider-->
+                                <div class="frame-wrapper">
+                                    <div class="frame">
+                                        <ul class="slider">
+                                            <li><img src="images/watcat/watcat001.png" alt=""></li>
+                                            <li><img src="images/watcat/watcat002.png" alt=""></li>
+                                            <li><img src="images/watcat/watcat003.png" alt=""></li>
+                                            <li><img src="images/watcat/watcat004.png" alt=""></li>
+                                            <li><img src="images/watcat/watcat005.png" alt=""></li>
+                                            <li><img src="images/watcat/watcat006.png" alt=""></li>
+                                            <li><img src="images/watcat/watcat007.png" alt=""></li>
+                                            <li><img src="images/watcat/watcat008.png" alt=""></li>
+                                            <li><img src="images/watcat/watcat009.png" alt=""></li>
+                                            <li><img src="images/watcat/watcat010.png" alt=""></li>
+                                            <li><img src="images/watcat/watcat011.png" alt=""></li>
+                                            <li><img src="images/watcat/watcat012.png" alt=""></li>
+                                            <li><img src="images/watcat/watcat013.png" alt=""></li>
+                                        </ul>
+                                    </div>
+                                    <div id="portfolio-button2">
+                                        <div class="slide-prev-button slide-button">◀</div>
+                                        <div class="slide-next-button slide-button">▶</div>
+                                    </div>
                                 </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
+                                <p class="my-3">영화 추천 사이트 Watcat은 Open API를 활용한 커뮤니티 사이트 입니다.
+                                    API 활용한 게시글 CRUD, 찜하기, 추천 등의 기능을 구현하였습니다.</p>
+                                <a class="btn b-tertiary" href="https://github.com/jw-lab/WatCat">WatCat github</a>
                             </div>
                         </div>
                     </div>
@@ -403,23 +353,31 @@
                 <div class="modal-body text-center pb-5">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-8">
+                            <div class="col-lg-10">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-3">Circus Tent</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-3">Argoscare</h2>
+                                <!-- Portfolio Modal - Slider-->
+                                <div class="frame-wrapper">
+                                    <div class="frame">
+                                        <ul class="slider">
+                                            <li><img src="images/argos/argos001.png" alt=""></li>
+                                            <li><img src="images/argos/argos002.png" alt=""></li>
+                                            <li><img src="images/argos/argos003.png" alt=""></li>
+                                            <li><img src="images/argos/argos004.png" alt=""></li>
+                                            <li><img src="images/argos/argos005.png" alt=""></li>
+                                            <li><img src="images/argos/argos006.png" alt=""></li>
+                                            <li><img src="images/argos/argos007.png" alt=""></li>
+                                        </ul>
+                                    </div>
+                                    <div id="portfolio-button3">
+                                        <div class="slide-prev-button slide-button">◀</div>
+                                        <div class="slide-next-button slide-button">▶</div>
+                                    </div>
                                 </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
+                                <p class="my-3">요양기관 평가 관리 사이트 입니다.
+                                    근로시간 관리, 식단 관리 기능 등을 구현하였습니다.</p>
+                                <a class="btn b-tertiary" href="https://argoscare.kr/">Argoscare(유료서비스)</a>
                             </div>
                         </div>
                     </div>
@@ -427,102 +385,7 @@
             </div>
         </div>
     </div>
-    <!-- Portfolio Modal 4-->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
-                                <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio Modal 5-->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
-                                <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio Modal 6-->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
-                                <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <!-- AOS init -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

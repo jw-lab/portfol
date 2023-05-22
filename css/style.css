@@ -67,6 +67,9 @@ section {
 .b-tertiary {
     background-color: var(--tertiary);
 }
+.b-tertiary:hover {
+  background-color: var(--tertiary);
+}
 .txt-primary {
     color: var(--primary);
 }
@@ -219,6 +222,7 @@ progress::-webkit-progress-value {
     transition: 0.5s;
     margin: 0px;
     padding: 0px;
+    user-select: none;
 }
 
  .frame-wrapper .frame li {
@@ -239,7 +243,7 @@ progress::-webkit-progress-value {
     max-height: 100%;
     aspect-ratio: 16/9;
 }
-.slide_button {
+.slide-button {
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -251,12 +255,13 @@ progress::-webkit-progress-value {
     height: 2rem;
   
     border-radius: 100%;
-    background-color: var(--grey-dark-color);
+    background-color: var(--grey-light-color);
     cursor: pointer;
+    user-select: none;
   }
-  .slide_prev_button {
-    left: 3.5rem;
-  }
-  .slide_next_button {
-    right: 3.5rem;
-  }
+.slide-prev-button {
+  left: 3.5rem;
+}
+.slide-next-button {
+  right: 3.5rem;
+}
